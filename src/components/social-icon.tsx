@@ -47,7 +47,7 @@ export default function SocialIconComponent({ type }: SocialIconProps) {
     <Tooltip>
       <TooltipTrigger asChild>
         <a href={href} target="_blank" rel="noreferrer">
-          <Icon className="transition-colors hover:fill-[#e03131]" />
+          <Icon className="transition-colors hover:text-[#e03131]" />
         </a>
       </TooltipTrigger>
       <TooltipContent>
