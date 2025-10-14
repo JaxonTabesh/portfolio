@@ -26,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Prevent Dark Reader from overriding colors */}
+        <meta name="darkreader-lock" />
         {/* Light mode favicons */}
         <link rel="icon" href="/favicons/light/favicon.ico" media="(prefers-color-scheme: light)" />
         <link
