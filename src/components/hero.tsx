@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import SocialIconComponent, { SocialIcon } from '@/components/social-icon';
 
 export default function Hero() {
   return (
@@ -10,25 +11,10 @@ export default function Hero() {
           <span className="text-[#e03131]">Jaxon Tabesh</span>.
         </h2>
         <div className="flex items-center gap-6 p-2 text-8xl">
-          <Tooltip>
-            <TooltipTrigger>
-              <a href="https://github.com/jaxontabesh" target="_blank">
-                <FaGithub className="transition-colors hover:fill-[#e03131]" />
-              </a>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Github</p>
-            </TooltipContent>
-          </Tooltip>
-          <a href="https://www.linkedin.com/in/jaxon-tabesh-08b2642b5/" target="_blank">
-            <FaLinkedin className="transition-colors hover:fill-[#e03131]" />
-          </a>
-          <a href="mailto:jaxon@jaxontabesh.com" target="_blank">
-            <FaEnvelope className="transition-colors hover:fill-[#e03131]" />
-          </a>
-          <a href="/Resume.pdf" target="_blank">
-            <FaFileAlt className="transition-colors hover:fill-[#e03131]" />
-          </a>
+          <SocialIconComponent type={SocialIcon.GitHub} />
+          <SocialIconComponent type={SocialIcon.LinkedIn} />
+          <SocialIconComponent type={SocialIcon.Email} />
+          <SocialIconComponent type={SocialIcon.Resume} />
         </div>
         <button>
           <svg
