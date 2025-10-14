@@ -5,7 +5,7 @@ import SocialIconComponent, { SocialIcon } from '@/components/social-icon';
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="flex h-screen flex-col items-center justify-center text-center">
+      <div className="flex h-screen flex-col items-center justify-center text-center dark:text-gray-400">
         <h2 className="m-2 text-center text-9xl">
           <span>Hi, I'm </span>
           <span className="text-[#e03131]">Jaxon Tabesh</span>.
