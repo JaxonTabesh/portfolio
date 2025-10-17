@@ -128,3 +128,7 @@
     background-color: darkred;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
