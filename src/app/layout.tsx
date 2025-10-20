@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,6 +17,17 @@ export const metadata: Metadata = {
   title: 'Jaxon Tabesh | Portfolio',
   description:
     'Software engineering portfolio showcasing projects, leadership experience, and technical skills.',
+  icons: {
+    icon: [
+      { url: '/favicons/light/favicon.ico', media: '(prefers-color-scheme: light)' },
+      { url: '/favicons/dark/favicon.ico', media: '(prefers-color-scheme: dark)' },
+    ],
+  },
+  manifest: '/favicons/light/site.webmanifest',
+  other: {
+    'darkreader-lock': 'true',
+    darkreader: 'enabled',
+  },
 };
 
 export default function RootLayout({
@@ -25,24 +37,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Prevent Dark Reader from overriding colors */}
-        <meta name="darkreader-lock" />
-        {/* Light mode favicons */}
-        <link rel="icon" href="/favicons/light/favicon.ico" media="(prefers-color-scheme: light)" />
-        <link
-          rel="manifest"
-          href="/favicons/light/site.webmanifest"
-          media="(prefers-color-scheme: light)"
-        />
-        {/* Dark mode favicons */}
-        <link rel="icon" href="/favicons/dark/favicon.ico" media="(prefers-color-scheme: dark)" />
-        <link
-          rel="manifest"
-          href="/favicons/dark/site.webmanifest"
-          media="(prefers-color-scheme: dark)"
-        />
-      </head>
       <body
         className={`bg-gray-200 dark:bg-gray-900 ${geistSans.variable} ${geistMono.variable} antialiased`}
       >

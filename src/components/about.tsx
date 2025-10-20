@@ -2,18 +2,18 @@ import TooltipIcon from './tooltip-icon';
 
 export default function About() {
   return (
-    <section id="about">
+    <section id="1">
       <div className="flex h-full min-h-screen flex-col items-center dark:text-gray-400">
         <h2 className="text-8xl">About</h2>
         <div className="flex max-w-7xl flex-grow flex-col items-center justify-center md:flex-row">
           <div className="flex-1">
             <div className="px-10 py-10 md:py-0">
               {/* <p className="pb-10">Portrait</p> */}
-              <p className="border-l pl-3 text-2xl">
+              <p className="border-l border-gray-900 pl-3 text-2xl dark:border-gray-400">
                 {"I\'m"} <span className="text-[#e03131]">Jaxon Tabesh</span>, a UC Irvine computer
                 science student and
                 <span className="text-[#e03131]"> {"Chancellor\'s"} Excellence Scholar</span>.{' '}
-                {"I\'m"}
+                {"I\'m "}
                 currently building a<span className="text-[#e03131]"> cross-platform app</span> at
                 <span className="text-[#e03131]"> TakeMyCall.ai</span>, which provides AI phone call
                 assistants for small businesses through
