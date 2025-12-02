@@ -1,24 +1,34 @@
 'use client';
 import { useEffect } from 'react';
-import { useSection, Section } from '@/app/section-context';
+import { useSection } from '@/app/section-context';
 
 export default function SectionObserver() {
-  const { activeSection, setActiveSection } = useSection();
+  const { setActiveSection } = useSection();
 
-  console.log('SectionObserver rendered.');
   useEffect(() => {
-    console.log('SectionObserver mounted');
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'));
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          console.log(entry.target.id, entry.isIntersecting);
-          if (entry.isIntersecting) setActiveSection(parseInt(entry.target.id));
-        });
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length === 0) return;
+
+        const best = visible[0];
+        const idNum = parseInt((best.target as HTMLElement).id, 10);
+        if (!Number.isNaN(idNum)) {
+          setActiveSection(idNum);
+        }
       },
-      { root: null, threshold: 0.51 },
+      {
+        root: null,
+        threshold: [0.2, 0.4, 0.6, 0.8],
+        rootMargin: '-20% 0px -20% 0px',
+      },
     );
 
-    const sections = document.querySelectorAll('section');
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
