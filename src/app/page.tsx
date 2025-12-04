@@ -1,6 +1,7 @@
 import Hero from '@/components/hero';
 import About from '@/components/about';
 import Arrows from '@/components/arrows';
+import Experience from '@/components/experience';
 import { SectionProvider } from '@/app/section-context';
 import SectionObserver from '@/app/section-observer';
 
@@ -13,6 +14,7 @@ export default function Home() {
           <Arrows />
           <Hero />
           <About />
+          <Experience />
         </SectionProvider>
       </main>
     </>
