@@ -141,6 +141,8 @@ function handleMedia({ mediaType, src, alt, width, height }: HandleMediaProps): 
       return (
         <video
           src={src}
+          width={width}
+          height={height}
           autoPlay
           disablePictureInPicture
           loop
