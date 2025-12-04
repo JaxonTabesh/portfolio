@@ -1,9 +1,10 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 type MediaType = 'img' | 'gif' | 'vid';
 
-type MediaAndSrc = [MediaType, string];
+type MediaAndSrc = [MediaType, string, string];
 
 type CarouselProps = {
   items: MediaAndSrc[];
@@ -19,6 +20,7 @@ type CarouselProps = {
 type HandleMediaProps = {
   mediaType: MediaType;
   src: string;
+  alt: string;
 };
 
 type ClampProps = {
@@ -52,8 +54,8 @@ export default function Carousel({
   const [index, setIndex] = useState(0);
   const [min, max] = [0, items.length - 1];
 
-  let isMin = index === min;
-  let isMax = index === max;
+  const isMin = index === min;
+  const isMax = index === max;
 
   return (
     <div>
@@ -68,9 +70,9 @@ export default function Carousel({
               className="flex w-full flex-row items-center transition-all duration-500 ease-in-out"
               style={{ transform: `translateX(-${index * 100}%)` }}
             >
-              {items.map(([mediaType, src]) => (
+              {items.map(([mediaType, src, alt]) => (
                 <div className="w-full shrink-0" key={src}>
-                  {handleMedia({ mediaType, src })}
+                  {handleMedia({ mediaType, src, alt })}
                 </div>
               ))}
             </div>
@@ -129,12 +131,22 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
   );
 }
 
-function handleMedia({ mediaType, src }: HandleMediaProps): React.ReactNode {
+function handleMedia({ mediaType, src, alt }: HandleMediaProps): React.ReactNode {
   switch (mediaType) {
     case 'img':
-      return <img src={src} className="w-full" />;
+      return <Image src={src} className="w-full" alt={alt} />;
     case 'vid':
-      return <video src={src} autoPlay disablePictureInPicture loop muted className="w-full" />;
+      return (
+        <video
+          src={src}
+          autoPlay
+          disablePictureInPicture
+          loop
+          muted
+          className="w-full"
+          aria-label={alt}
+        />
+      );
     case 'gif':
       return <p>gif</p>;
   }
