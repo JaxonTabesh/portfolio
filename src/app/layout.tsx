@@ -36,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`bg-gray-200 dark:bg-gray-900 ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`overflow-x-hidden bg-gray-200 dark:bg-gray-900 ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
