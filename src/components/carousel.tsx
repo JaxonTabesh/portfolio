@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 type MediaType = 'img' | 'gif' | 'vid';
 
-type MediaAndSrc = [MediaType, string, string];
+type MediaAndSrc = [MediaType, string, string, number, number];
 
 type CarouselProps = {
   items: MediaAndSrc[];
@@ -21,6 +21,8 @@ type HandleMediaProps = {
   mediaType: MediaType;
   src: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 type ClampProps = {
@@ -70,9 +72,9 @@ export default function Carousel({
               className="flex w-full flex-row items-center transition-all duration-500 ease-in-out"
               style={{ transform: `translateX(-${index * 100}%)` }}
             >
-              {items.map(([mediaType, src, alt]) => (
+              {items.map(([mediaType, src, alt, width, height]) => (
                 <div className="w-full shrink-0" key={src}>
-                  {handleMedia({ mediaType, src, alt })}
+                  {handleMedia({ mediaType, src, alt, width, height })}
                 </div>
               ))}
             </div>
@@ -131,10 +133,10 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
   );
 }
 
-function handleMedia({ mediaType, src, alt }: HandleMediaProps): React.ReactNode {
+function handleMedia({ mediaType, src, alt, width, height }: HandleMediaProps): React.ReactNode {
   switch (mediaType) {
     case 'img':
-      return <Image src={src} fill className="w-full" alt={alt} />;
+      return <Image width={width} height={height} src={src} className="w-full" alt={alt} />;
     case 'vid':
       return (
         <video

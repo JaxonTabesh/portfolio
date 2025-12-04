@@ -30,13 +30,55 @@ export default function Experience() {
               <div className="sm:hidden">
                 <Carousel
                   items={[
-                    ['vid', '/carousel_content/takemycall/1.mp4', 'takemycall.ai App Demo Video'],
-                    ['img', '/carousel_content/takemycall/1.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/2.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/3.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/4.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/5.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/6.png', 'takemycall.ai App Demo Image'],
+                    [
+                      'vid',
+                      '/carousel_content/takemycall/1.mp4',
+                      'takemycall.ai App Demo Video',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/1.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/2.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/3.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/4.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/5.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/6.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
                   ]}
                   width={'w-52'}
                   arrowSize="size-16"
@@ -48,13 +90,55 @@ export default function Experience() {
               <div className="hidden sm:flex">
                 <Carousel
                   items={[
-                    ['vid', '/carousel_content/takemycall/1.mp4', 'takemycall.ai App Demo Video'],
-                    ['img', '/carousel_content/takemycall/1.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/2.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/3.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/4.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/5.png', 'takemycall.ai App Demo Image'],
-                    ['img', '/carousel_content/takemycall/6.png', 'takemycall.ai App Demo Image'],
+                    [
+                      'vid',
+                      '/carousel_content/takemycall/1.mp4',
+                      'takemycall.ai App Demo Video',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/1.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/2.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/3.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/4.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/5.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
+                    [
+                      'img',
+                      '/carousel_content/takemycall/6.png',
+                      'takemycall.ai App Demo Image',
+                      1179,
+                      2556,
+                    ],
                   ]}
                   width={'w-72'}
                   arrowSize="size-20"
