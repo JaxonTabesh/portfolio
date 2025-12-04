@@ -2,7 +2,7 @@ import SocialIconComponent, { SocialIcon } from '@/components/social-icon';
 
 export default function Hero() {
   return (
-    <section id="0">
+    <section id="0" className="-mt-10 mb-10">
       <div className="flex min-h-screen flex-col items-center justify-center text-center dark:text-gray-400">
         <h2 className="m-8 text-center text-6xl md:text-9xl">
           <span>{"Hi, I'm "}</span>
