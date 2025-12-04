@@ -4,12 +4,10 @@ import { createContext, useState, useContext } from 'react';
 export const enum Section {
   Hero = 0,
   About = 1,
-  Education = 2,
-  Experience = 3,
-  Projects = 4,
+  Experience = 2,
 }
 
-export const lastSection = Section.Education;
+export const lastSection = Section.Experience;
 
 const SectionContext = createContext({
   activeSection: Section.Hero,
