@@ -30,17 +30,17 @@ export default function Experience() {
               <div className="sm:hidden">
                 <Carousel
                   items={[
-                    ['vid', 'carousel_content/takemycall/1.mp4'],
-                    ['img', 'carousel_content/takemycall/1.png'],
-                    ['img', 'carousel_content/takemycall/2.png'],
-                    ['img', 'carousel_content/takemycall/3.png'],
-                    ['img', 'carousel_content/takemycall/4.png'],
-                    ['img', 'carousel_content/takemycall/5.png'],
-                    ['img', 'carousel_content/takemycall/6.png'],
+                    ['vid', '/carousel_content/takemycall/1.mp4', 'takemycall.ai App Demo Video'],
+                    ['img', '/carousel_content/takemycall/1.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/2.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/3.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/4.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/5.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/6.png', 'takemycall.ai App Demo Image'],
                   ]}
-                  width={'w-50'}
-                  arrowSize="size-15"
-                  arrowOffset="mr-50"
+                  width={'w-52'}
+                  arrowSize="size-16"
+                  arrowOffset="mr-52"
                   mockPhone
                 />
               </div>
@@ -48,17 +48,17 @@ export default function Experience() {
               <div className="hidden sm:flex">
                 <Carousel
                   items={[
-                    ['vid', 'carousel_content/takemycall/1.mp4'],
-                    ['img', 'carousel_content/takemycall/1.png'],
-                    ['img', 'carousel_content/takemycall/2.png'],
-                    ['img', 'carousel_content/takemycall/3.png'],
-                    ['img', 'carousel_content/takemycall/4.png'],
-                    ['img', 'carousel_content/takemycall/5.png'],
-                    ['img', 'carousel_content/takemycall/6.png'],
+                    ['vid', '/carousel_content/takemycall/1.mp4', 'takemycall.ai App Demo Video'],
+                    ['img', '/carousel_content/takemycall/1.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/2.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/3.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/4.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/5.png', 'takemycall.ai App Demo Image'],
+                    ['img', '/carousel_content/takemycall/6.png', 'takemycall.ai App Demo Image'],
                   ]}
-                  width={'w-70'}
+                  width={'w-72'}
                   arrowSize="size-20"
-                  arrowOffset="mr-70"
+                  arrowOffset="mr-72"
                   mockPhone
                 />
               </div>

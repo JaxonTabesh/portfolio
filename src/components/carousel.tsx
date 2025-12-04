@@ -134,7 +134,7 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
 function handleMedia({ mediaType, src, alt }: HandleMediaProps): React.ReactNode {
   switch (mediaType) {
     case 'img':
-      return <Image src={src} className="w-full" alt={alt} />;
+      return <Image src={src} fill className="w-full" alt={alt} />;
     case 'vid':
       return (
         <video
@@ -143,6 +143,7 @@ function handleMedia({ mediaType, src, alt }: HandleMediaProps): React.ReactNode
           disablePictureInPicture
           loop
           muted
+          playsInline
           className="w-full"
           aria-label={alt}
         />
