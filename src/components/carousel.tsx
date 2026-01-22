@@ -127,7 +127,7 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
         strokeLinecap="round"
         strokeLinejoin="round"
         d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        className={`fill-gray-500 p-0 transition-colors duration-150 ${activeColor} ${hoverColor}`}
+        className={`fill-neutral-500 p-0 transition-colors duration-150 ${activeColor} ${hoverColor}`}
       />
     </svg>
   );
@@ -136,11 +136,11 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
 function handleMedia({ mediaType, src, alt, width, height }: HandleMediaProps): React.ReactNode {
   switch (mediaType) {
     case 'img':
-      return <Image width={width} height={height} src={src} className="w-full" alt={alt} />;
+      return <Image width={width} height={height} src={`.${src}`} className="w-full" alt={alt} />;
     case 'vid':
       return (
         <video
-          src={src}
+          src={`.${src}`}
           width={width}
           height={height}
           autoPlay
@@ -169,11 +169,11 @@ function VisualIndex({ index, total, className }: VisualIndexProps): React.React
   for (let i = 0; i < total; i++) {
     if (i === index) {
       bars.push(
-        <div className={`h-2 flex-[1.5] bg-gray-400 transition-all duration-300`} key={i}></div>,
+        <div className={`h-2 flex-[1.5] bg-neutral-400 transition-all duration-300`} key={i}></div>,
       );
     } else {
       bars.push(
-        <div className={`h-2 flex-1 bg-gray-300 transition-all duration-300`} key={i}></div>,
+        <div className={`h-2 flex-1 bg-neutral-300 transition-all duration-300`} key={i}></div>,
       );
     }
   }

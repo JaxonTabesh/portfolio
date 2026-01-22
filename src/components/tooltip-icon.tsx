@@ -9,7 +9,7 @@ export default function TooltipIcon({ path, tooltip }: TooltipIconProps) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <img src={path}></img>
+        <img src={`.${path}`} alt={tooltip}></img>
       </TooltipTrigger>
       <TooltipContent>
         <p>{tooltip}</p>
