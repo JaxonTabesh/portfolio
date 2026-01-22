@@ -6,7 +6,7 @@ export enum SocialIcon {
   GitHub = 'GitHub',
   LinkedIn = 'LinkedIn',
   Email = 'Email',
-  Resume = 'Résumé',
+  Resume = 'Resume',
 }
 
 interface SocialIconProps {
@@ -35,7 +35,7 @@ export default function SocialIconComponent({ type }: SocialIconProps) {
       tooltip = 'jaxon@jaxontabesh.com';
       break;
     case SocialIcon.Resume:
-      href = '/Resume.pdf';
+      href = './Resume.pdf';
       Icon = FaFileAlt;
       tooltip = 'Résumé';
       break;

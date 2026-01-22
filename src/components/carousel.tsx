@@ -136,11 +136,11 @@ function Arrow({ arrowSize, activeColor, hoverColor }: ArrowProps): React.ReactN
 function handleMedia({ mediaType, src, alt, width, height }: HandleMediaProps): React.ReactNode {
   switch (mediaType) {
     case 'img':
-      return <Image width={width} height={height} src={`.${src}`} className="w-full" alt={alt} />;
+      return <Image width={width} height={height} src={src} className="w-full" alt={alt} />;
     case 'vid':
       return (
         <video
-          src={`.${src}`}
+          src={src}
           width={width}
           height={height}
           autoPlay
